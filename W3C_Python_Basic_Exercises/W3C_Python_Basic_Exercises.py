@@ -7,6 +7,7 @@
 
 # Import Resources
 from sys import version_info
+import datetime, time
 
 
 def basicPythonExercises():
@@ -56,7 +57,11 @@ def basicPythonExercises():
     Current date and time : 
     2014-07-05 14:34:14
     '''
-
+    currTime = time.time()
+    print('\t Exercise 3 Solution: \n')
+    print('Current date and time:')
+    print(str(datetime.datetime.fromtimestamp(currTime).strftime('%Y-%m-%d %H:%M:%S')))
+    print('\n\n')
 
 
     '''
