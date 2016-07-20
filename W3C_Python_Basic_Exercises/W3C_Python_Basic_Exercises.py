@@ -6,6 +6,8 @@
 '''
 
 # Import Resources
+from sys import version_info
+
 
 def basicPythonExercises():
     '''
@@ -23,20 +25,28 @@ def basicPythonExercises():
     Twinkle, twinkle, little star, 
 	    How I wonder what you are
     '''
-
+    print('\t Exercise 1 Solution: \n')
     print('Twinkle, twinkle, little star,' +
           '\n\tHow I wonder what you are!' +
           '\n\t\tUp above the world so high,' +
           '\n\t\tLike a diamond in the sky.' +
           '\nTwinkle, twinkle, little star,' +
           '\n\tHow I wonder what you are')
+    print('\n\n')
 
 
     '''
                 - 02 -
     Write a Python program to get the Python version you are using.
     '''
-
+    print('\t Exercise 2 Solution: \n')
+    print('You are using the ' +
+          str(version_info[3]).title() + ' Release' +
+          ' of Python Version: ' +
+          str(version_info[0]) + '.' +
+          str(version_info[1]) + '.' +
+          str(version_info[2]))
+    print('\n\n')
 
 
     '''
