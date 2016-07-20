@@ -7,7 +7,8 @@
 
 # Import Resources
 from sys import version_info
-import datetime, time
+from math import pi
+import datetime, time, os, platform
 
 
 def basicPythonExercises():
@@ -33,7 +34,14 @@ def basicPythonExercises():
           '\n\t\tLike a diamond in the sky.' +
           '\nTwinkle, twinkle, little star,' +
           '\n\tHow I wonder what you are')
-    print('\n\n')
+    if int(version_info[0]) != 3:
+            raw_input("\n\nPress any key to continue . . . ")
+    else:
+        input("\n\nPress any key to continue . . . ")
+    if str(platform.system()).lower() == 'windows':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 
     '''
@@ -47,7 +55,14 @@ def basicPythonExercises():
           str(version_info[0]) + '.' +
           str(version_info[1]) + '.' +
           str(version_info[2]))
-    print('\n\n')
+    if int(version_info[0]) != 3:
+            raw_input("\n\nPress any key to continue . . . ")
+    else:
+        input("\n\nPress any key to continue . . . ")
+    if str(platform.system()).lower() == 'windows':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 
     '''
@@ -61,7 +76,14 @@ def basicPythonExercises():
     print('\t Exercise 3 Solution: \n')
     print('Current date and time:')
     print(str(datetime.datetime.fromtimestamp(currTime).strftime('%Y-%m-%d %H:%M:%S')))
-    print('\n\n')
+    if int(version_info[0]) != 3:
+            raw_input("\n\nPress any key to continue . . . ")
+    else:
+        input("\n\nPress any key to continue . . . ")
+    if str(platform.system()).lower() == 'windows':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 
     '''
@@ -71,8 +93,29 @@ def basicPythonExercises():
     Sample Output : 
     r = 1.1
     Area = 3.8013271108436504
+    note the area of a circle is pi * radius squared
     '''
-
+    print('\t Exercise 4 Solution: \n')
+    try:
+        # Version 2.7 of python will require raw_input instead of input syntax
+        if int(version_info[0]) != 3:
+            radVar = float(raw_input("Please enter the radius of a circle as a number:  ").replace(",",""))
+        else:
+            radVar = float(input("Please enter the radius of a circle as a number:  ").replace(",",""))
+        piVar = float(pi)
+        a = float(piVar * (radVar * radVar))
+        print('radius = ' + str(radVar))
+        print('Area = ' + str(piVar))
+    except:
+        print("\nYou didn't enter a number.")
+    if int(version_info[0]) != 3:
+            raw_input("\n\nPress any key to continue . . . ")
+    else:
+        input("\n\nPress any key to continue . . . ")
+    if str(platform.system()).lower() == 'windows':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 
     '''
