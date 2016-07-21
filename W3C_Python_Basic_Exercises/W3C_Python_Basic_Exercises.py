@@ -161,6 +161,7 @@ def basicPythonExercises():
     else:
         os.system('clear')
     # Display output
+    print('\t Exercise 5 Solution: \n')
     print('User Name: ' + lName + ' ' + fName)
 
     # Prompt user to enter any key after displaying output
@@ -208,7 +209,7 @@ def basicPythonExercises():
         print('List is: ', numList)
         print('Tuple is: ', numTuple)
     else:
-        print('You did not enter any numbers.')
+        print('\nYou did not enter any numbers.')
 
     # Prompt user to enter any key after displaying output
     if int(version_info[0]) != 3:
@@ -229,7 +230,50 @@ def basicPythonExercises():
     Sample filename : abc.java
     Output : java
     '''
+    print('\t Exercise 7 Solution 1: \n')
+    if int(version_info[0]) != 3:
+        fileName = raw_input("Please enter the full file name including extension: ")
+    else:
+        fileName = input("Please enter the full file name including extension: ")
+    if fileName.find(".") > 0:
+        fileExt = fileName[(fileName.rfind(".")+1):]
+        # Display Output
+        print('\n\nThe extension of the file is "' + str(fileExt)) + '"'
+    
+    #        - Alternative Solution: Select File from dialog -
+    # Prompt user to enter any key and then move to second solution
+    if int(version_info[0]) != 3:
+        raw_input("\n\nPress any key to continue . . . ")
+    else:
+        input("\n\nPress any key to continue . . . ")
+    # Then, clear the screen.
+    if str(platform.system()).lower() == 'windows':
+        os.system('cls')
+    else:
+        os.system('clear')
 
+    print('\t Exercise 7 Solution 2: \n')    
+    if int(version_info[0]) != 3:
+        import tkFileDialog
+        fileName = tkFileDialog.askopenfilename(initialdir='/', title = 'Please select a file.')
+    else:
+        from tkinter import filedialog
+        fileName = filedialog.askopenfilename(initialdir='/', title = 'Please select a file.')
+    if fileName.find(".") > 0:
+        fileExt = fileName[(fileName.rfind(".")+1):]
+        # Display Output
+        print('\n\nThe extension of the file is "' + str(fileExt) + '"')
+
+    # Prompt user to enter any key after displaying output
+    if int(version_info[0]) != 3:
+            raw_input("\n\nPress any key to continue . . . ")
+    else:
+        input("\n\nPress any key to continue . . . ")
+    # Then, clear the screen.
+    if str(platform.system()).lower() == 'windows':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 
     '''
