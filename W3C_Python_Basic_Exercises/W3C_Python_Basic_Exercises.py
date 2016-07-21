@@ -11,6 +11,23 @@ from math import pi
 import datetime, time, os, platform
 
 
+# Repeated procedures used in main procedure
+def clearScreen(btnRqst, clrScrn):
+    # Prompt user to enter any key after displaying output.
+    if btnRqst == True:
+        if int(version_info[0]) != 3:
+                raw_input("\n\nPress any key to continue . . . ")
+        else:
+            input("\n\nPress any key to continue . . . ")
+    # Clear the screen.
+    if clrScrn == True:
+        if str(platform.system()).lower() == 'windows':
+            os.system('cls')
+        else:
+            os.system('clear')
+
+
+# Main Procedure
 def basicPythonExercises():
     '''
                 - 01 -
@@ -35,16 +52,8 @@ def basicPythonExercises():
           '\nTwinkle, twinkle, little star,' +
           '\n\tHow I wonder what you are')
 
-    # Prompt user to enter any key after displaying output
-    if int(version_info[0]) != 3:
-            raw_input("\n\nPress any key to continue . . . ")
-    else:
-        input("\n\nPress any key to continue . . . ")
-    # Then, clear the screen.
-    if str(platform.system()).lower() == 'windows':
-        os.system('cls')
-    else:
-        os.system('clear')
+    # Request key press and clear the screen
+    clearScreen(True, True)
 
 
     '''
@@ -59,16 +68,8 @@ def basicPythonExercises():
           str(version_info[1]) + '.' +
           str(version_info[2]))
 
-    # Prompt user to enter any key after displaying output
-    if int(version_info[0]) != 3:
-            raw_input("\n\nPress any key to continue . . . ")
-    else:
-        input("\n\nPress any key to continue . . . ")
-    # Then, clear the screen.
-    if str(platform.system()).lower() == 'windows':
-        os.system('cls')
-    else:
-        os.system('clear')
+    # Request key press and clear the screen
+    clearScreen(True, True)
 
 
     '''
@@ -83,16 +84,8 @@ def basicPythonExercises():
     print('Current date and time:')
     print(str(datetime.datetime.fromtimestamp(currTime).strftime('%Y-%m-%d %H:%M:%S')))
 
-    # Prompt user to enter any key after displaying output
-    if int(version_info[0]) != 3:
-            raw_input("\n\nPress any key to continue . . . ")
-    else:
-        input("\n\nPress any key to continue . . . ")
-    # Then, clear the screen.
-    if str(platform.system()).lower() == 'windows':
-        os.system('cls')
-    else:
-        os.system('clear')
+    # Request key press and clear the screen
+    clearScreen(True, True)
 
 
     '''
@@ -114,26 +107,15 @@ def basicPythonExercises():
         piVar = float(pi)
         areaVar = float(piVar * (radVar * radVar))
         # Clear screen
-        if str(platform.system()).lower() == 'windows':
-            os.system('cls')
-        else:
-            os.system('clear')
+        clearScreen(False, True)
         # Display output
         print('Radius = ' + str(radVar))
         print('Area = ' + str(areaVar))
     except:
         print("\nYou didn't enter a number.")
 
-   # Prompt user to enter any key after displaying output
-    if int(version_info[0]) != 3:
-            raw_input("\n\nPress any key to continue . . . ")
-    else:
-        input("\n\nPress any key to continue . . . ")
-    # Then, clear the screen.
-    if str(platform.system()).lower() == 'windows':
-        os.system('cls')
-    else:
-        os.system('clear')
+   # Request key press and clear the screen
+    clearScreen(True, True)
 
 
     '''
@@ -156,24 +138,13 @@ def basicPythonExercises():
     lName = str(lName).strip()
     lName = str(lName).title()
     # Clear Screen
-    if str(platform.system()).lower() == 'windows':
-        os.system('cls')
-    else:
-        os.system('clear')
+    clearScree(False, True)
     # Display output
     print('\t Exercise 5 Solution: \n')
     print('User Name: ' + lName + ' ' + fName)
 
-    # Prompt user to enter any key after displaying output
-    if int(version_info[0]) != 3:
-            raw_input("\n\nPress any key to continue . . . ")
-    else:
-        input("\n\nPress any key to continue . . . ")
-    # Then, clear the screen.
-    if str(platform.system()).lower() == 'windows':
-        os.system('cls')
-    else:
-        os.system('clear')
+   # Request key press and clear the screen
+    clearScreen(True, True)
 
 
     '''
@@ -211,16 +182,8 @@ def basicPythonExercises():
     else:
         print('\nYou did not enter any numbers.')
 
-    # Prompt user to enter any key after displaying output
-    if int(version_info[0]) != 3:
-            raw_input("\n\nPress any key to continue . . . ")
-    else:
-        input("\n\nPress any key to continue . . . ")
-    # Then, clear the screen.
-    if str(platform.system()).lower() == 'windows':
-        os.system('cls')
-    else:
-        os.system('clear')
+    # Request key press and clear the screen
+    clearScreen(True, True)
 
 
     '''
@@ -241,16 +204,8 @@ def basicPythonExercises():
         print('\n\nThe extension of the file is "' + str(fileExt)) + '"'
     
     #        - Alternative Solution: Select File from dialog -
-    # Prompt user to enter any key and then move to second solution
-    if int(version_info[0]) != 3:
-        raw_input("\n\nPress any key to continue . . . ")
-    else:
-        input("\n\nPress any key to continue . . . ")
-    # Then, clear the screen.
-    if str(platform.system()).lower() == 'windows':
-        os.system('cls')
-    else:
-        os.system('clear')
+    # Request key press and clear the screen before moving to alternative solution
+    clearScreen(True, True)
 
     print('\t Exercise 7 Solution 2: \n')    
     if int(version_info[0]) != 3:
@@ -264,16 +219,8 @@ def basicPythonExercises():
         # Display Output
         print('\n\nThe extension of the file is "' + str(fileExt) + '"')
 
-    # Prompt user to enter any key after displaying output
-    if int(version_info[0]) != 3:
-            raw_input("\n\nPress any key to continue . . . ")
-    else:
-        input("\n\nPress any key to continue . . . ")
-    # Then, clear the screen.
-    if str(platform.system()).lower() == 'windows':
-        os.system('cls')
-    else:
-        os.system('clear')
+    # Request key press and clear the screen
+    clearScreen(True, True)
 
 
     '''
