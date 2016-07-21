@@ -34,10 +34,13 @@ def basicPythonExercises():
           '\n\t\tLike a diamond in the sky.' +
           '\nTwinkle, twinkle, little star,' +
           '\n\tHow I wonder what you are')
+
+    # Prompt user to enter any key after displaying output
     if int(version_info[0]) != 3:
             raw_input("\n\nPress any key to continue . . . ")
     else:
         input("\n\nPress any key to continue . . . ")
+    # Then, clear the screen.
     if str(platform.system()).lower() == 'windows':
         os.system('cls')
     else:
@@ -55,10 +58,13 @@ def basicPythonExercises():
           str(version_info[0]) + '.' +
           str(version_info[1]) + '.' +
           str(version_info[2]))
+
+    # Prompt user to enter any key after displaying output
     if int(version_info[0]) != 3:
             raw_input("\n\nPress any key to continue . . . ")
     else:
         input("\n\nPress any key to continue . . . ")
+    # Then, clear the screen.
     if str(platform.system()).lower() == 'windows':
         os.system('cls')
     else:
@@ -76,10 +82,13 @@ def basicPythonExercises():
     print('\t Exercise 3 Solution: \n')
     print('Current date and time:')
     print(str(datetime.datetime.fromtimestamp(currTime).strftime('%Y-%m-%d %H:%M:%S')))
+
+    # Prompt user to enter any key after displaying output
     if int(version_info[0]) != 3:
             raw_input("\n\nPress any key to continue . . . ")
     else:
         input("\n\nPress any key to continue . . . ")
+    # Then, clear the screen.
     if str(platform.system()).lower() == 'windows':
         os.system('cls')
     else:
@@ -103,15 +112,24 @@ def basicPythonExercises():
         else:
             radVar = float(input("Please enter the radius of a circle as a number:  ").replace(",",""))
         piVar = float(pi)
-        a = float(piVar * (radVar * radVar))
-        print('radius = ' + str(radVar))
-        print('Area = ' + str(piVar))
+        areaVar = float(piVar * (radVar * radVar))
+        # Clear screen
+        if str(platform.system()).lower() == 'windows':
+            os.system('cls')
+        else:
+            os.system('clear')
+        # Display output
+        print('Radius = ' + str(radVar))
+        print('Area = ' + str(areaVar))
     except:
         print("\nYou didn't enter a number.")
+
+   # Prompt user to enter any key after displaying output
     if int(version_info[0]) != 3:
             raw_input("\n\nPress any key to continue . . . ")
     else:
         input("\n\nPress any key to continue . . . ")
+    # Then, clear the screen.
     if str(platform.system()).lower() == 'windows':
         os.system('cls')
     else:
@@ -124,7 +142,37 @@ def basicPythonExercises():
     print them in reverse 
     order with a space between them.
     '''
+    print('\t Exercise 5 Solution: \n')
+    if int(version_info[0]) != 3:
+        fName = str(raw_input("Please enter your first name: "))
+        lName = str(raw_input("Please enter your last name: "))
+    else:
+        fName = str(input("Please enter your first name: "))
+        lName = str(input("Please enter your last name: "))
+    
+    # Strip leading or trailing spaces & convert to Title case
+    fName = str(fName).strip()
+    fName = str(fName).title()
+    lName = str(lName).strip()
+    lName = str(lName).title()
+    # Clear Screen
+    if str(platform.system()).lower() == 'windows':
+        os.system('cls')
+    else:
+        os.system('clear')
+    # Display output
+    print('User Name: ' + lName + ' ' + fName)
 
+    # Prompt user to enter any key after displaying output
+    if int(version_info[0]) != 3:
+            raw_input("\n\nPress any key to continue . . . ")
+    else:
+        input("\n\nPress any key to continue . . . ")
+    # Then, clear the screen.
+    if str(platform.system()).lower() == 'windows':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 
     '''
@@ -136,7 +184,18 @@ def basicPythonExercises():
     List : ['3', ' 5', ' 7', ' 23'] 
     Tuple : ('3', ' 5', ' 7', ' 23')
     '''
+    print('\t Exercise 6 Solution: \n')
 
+    # Prompt user to enter any key after displaying output
+    if int(version_info[0]) != 3:
+            raw_input("\n\nPress any key to continue . . . ")
+    else:
+        input("\n\nPress any key to continue . . . ")
+    # Then, clear the screen.
+    if str(platform.system()).lower() == 'windows':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 
     '''
