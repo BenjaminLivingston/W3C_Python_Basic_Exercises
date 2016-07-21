@@ -1,4 +1,4 @@
-# Created with Python 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:01:18) 
+# Created with Python 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:01:18)
 '''
     56 Basic Python Exercises
     Located at: http://www.w3resource.com/python-exercises/python-basic-exercises.php
@@ -18,13 +18,13 @@ def basicPythonExercises():
 
     Sample String : "Twinkle, twinkle, little star, How I wonder what you are!
     Up above the world so high, Like a diamond in the sky. Twinkle, twinkle,
-    little star, How I wonder what you are" 
+    little star, How I wonder what you are"
     Output :
     Twinkle, twinkle, little star,
-	    How I wonder what you are! 
-		    Up above the world so high,   		
-		    Like a diamond in the sky. 
-    Twinkle, twinkle, little star, 
+	    How I wonder what you are!
+		    Up above the world so high,
+		    Like a diamond in the sky.
+    Twinkle, twinkle, little star,
 	    How I wonder what you are
     '''
     print('\t Exercise 1 Solution: \n')
@@ -74,8 +74,8 @@ def basicPythonExercises():
     '''
                 - 03 -
     Write a Python program to display the current date and time.
-    Sample Output : 
-    Current date and time : 
+    Sample Output :
+    Current date and time :
     2014-07-05 14:34:14
     '''
     currTime = time.time()
@@ -99,7 +99,7 @@ def basicPythonExercises():
                 - 04 -
     Write a Python program which accept the radius of a circle from the user
     and compute the area.
-    Sample Output : 
+    Sample Output :
     r = 1.1
     Area = 3.8013271108436504
     note the area of a circle is pi * radius squared
@@ -139,7 +139,7 @@ def basicPythonExercises():
     '''
                 - 05 -
     Write a Python program which accept the user's first and last name and
-    print them in reverse 
+    print them in reverse
     order with a space between them.
     '''
     print('\t Exercise 5 Solution: \n')
@@ -149,7 +149,7 @@ def basicPythonExercises():
     else:
         fName = str(input("Please enter your first name: "))
         lName = str(input("Please enter your last name: "))
-    
+
     # Strip leading or trailing spaces & convert to Title case
     fName = str(fName).strip()
     fName = str(fName).title()
@@ -180,11 +180,35 @@ def basicPythonExercises():
     Write a Python program which accepts a sequence of comma-separated numbers
     from user and generate a list and a tuple with those numbers.
     Sample data : 3, 5, 7, 23
-    Output : 
-    List : ['3', ' 5', ' 7', ' 23'] 
+    Output :
+    List : ['3', ' 5', ' 7', ' 23']
     Tuple : ('3', ' 5', ' 7', ' 23')
     '''
     print('\t Exercise 6 Solution: \n')
+    # Accept user list of numbers
+    if int(version_info[0]) != 3:
+        numString = str(raw_input("Please enter a list of numbers separated by commas" +
+                                  "\n(Note do not use commas in numbers greater than 1,000): "))
+    else:
+        numString = str(input("Please enter a list of numbers separated by commas" +
+                              "\n(Note do not use commas in numbers greater than 1,000): "))
+    # Create List -- simplest solution is: numList = [n.strip() for n in numString.split(',')]
+    # But, I want to make sure only numbers are included on the list
+    numString = str(numString).replace(" ","")
+    numList = []
+    for n in numString.split(','):
+        try:
+            numList.append(float(n))
+        except:
+            pass
+    # Create Tuple
+    if int(len(numList)) != 0:
+        numTuple = (numList)
+        # Debug/Proving it worked
+        print('List is: ', numList)
+        print('Tuple is: ', numTuple)
+    else:
+        print('You did not enter any numbers.')
 
     # Prompt user to enter any key after displaying output
     if int(version_info[0]) != 3:
@@ -202,7 +226,7 @@ def basicPythonExercises():
                 - 07 -
     Write a Python program to accept a filename from the user print the extension
     of that.
-    Sample filename : abc.java 
+    Sample filename : abc.java
     Output : java
     '''
 
@@ -231,7 +255,7 @@ def basicPythonExercises():
                 - 10 -
     Write a Python program that accept an integer (n) and computes the value of
     n+nn+nnn.
-    Sample value of n is 5 
+    Sample value of n is 5
     Expected Result : 615
     '''
 
@@ -240,9 +264,9 @@ def basicPythonExercises():
     '''
                 - 11 -
     Write a Python program to print the documents (syntax, description etc.) of
-    Python built-in function(s). 
+    Python built-in function(s).
     Sample function : abs()
-    Expected Result : 
+    Expected Result :
     abs(number) -> number
     Return the absolute value of the argument.
     '''
@@ -252,7 +276,7 @@ def basicPythonExercises():
     '''
                 - 12 -
     Write a Python program to print the calendar of a given month and year.
-    Note : Use 'calendar' module. 
+    Note : Use 'calendar' module.
     '''
 
 
@@ -273,7 +297,7 @@ def basicPythonExercises():
                 - 14 -
     Write a Python program to calculate number of days between two dates.
     Sample dates : (2014, 7, 2), (2014, 7, 11)
-    Expected output : 9 days 
+    Expected output : 9 days
     '''
 
 
@@ -287,7 +311,7 @@ def basicPythonExercises():
 
     '''
                 - 16 -
-    Write a Python program to get the difference between a given number and 17, 
+    Write a Python program to get the difference between a given number and 17,
     if the number is greater than 17 return double the absolute difference.
     '''
 
@@ -312,7 +336,7 @@ def basicPythonExercises():
                 - 19 -
     Write a Python program to get a new string from a given string where "Is"
     has been added to the front. If the given string already begins with "Is"
-    then return the string unchanged. 
+    then return the string unchanged.
     '''
 
 
@@ -360,7 +384,7 @@ def basicPythonExercises():
                 - 25 -
     Write a Python program to check whether a specified value is contained in a
     group of values.
-    Test Data : 
+    Test Data :
     3 -> [1, 5, 8, 3] : True
     -1 -> [1, 5, 8, 3] : False
     '''
@@ -376,7 +400,7 @@ def basicPythonExercises():
 
     '''
                 - 27 -
-    Write a Python program to concatenate all elements in a list into a string 
+    Write a Python program to concatenate all elements in a list into a string
     and return it.
     '''
 
@@ -384,15 +408,15 @@ def basicPythonExercises():
 
     '''
                 - 28 -
-    Write a Python program to print all even numbers from a given numbers list 
-    in the same order and stop the printing if any numbers that come after 237 
+    Write a Python program to print all even numbers from a given numbers list
+    in the same order and stop the printing if any numbers that come after 237
     in the sequence.
     Sample numbers list :
 
-    numbers = [    
-        386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 
-        399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217, 
-        815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717, 
+    numbers = [
+        386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345,
+        399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217,
+        815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717,
         958,743, 527
         ]
     '''
@@ -403,10 +427,10 @@ def basicPythonExercises():
                 - 29 -
     Write a Python program to print out a set containing all the colors from
     color_list_1 which are not present in color_list_2.
-    Test Data : 
-    color_list_1 = set(["White", "Black", "Red"]) 
+    Test Data :
+    color_list_1 = set(["White", "Black", "Red"])
     color_list_2 = set(["Red", "Green"])
-    Expected Output : 
+    Expected Output :
     {'Black', 'White'}
     '''
 
@@ -486,7 +510,7 @@ def basicPythonExercises():
 
     '''
                 - 39 -
-    Write a Python program to compute the future value of a specified principal 
+    Write a Python program to compute the future value of a specified principal
     amount, rate of interest, and number of years.
     Test Data : amt = 10000, int = 3.5, years = 7
     Expected Output : 12722.79
@@ -540,7 +564,7 @@ def basicPythonExercises():
 
     '''
                 - 46 -
-    Write a python program to get the path and name of the file that is currently 
+    Write a python program to get the path and name of the file that is currently
     executing.
     '''
 
@@ -577,8 +601,8 @@ def basicPythonExercises():
     '''
                 - 51 -
     Write a Python program to determine profiling of Python programs.
-    Note: A profile is a set of statistics that describes how often and for how 
-    long various parts of the program executed. These statistics can be formatted 
+    Note: A profile is a set of statistics that describes how often and for how
+    long various parts of the program executed. These statistics can be formatted
     into reports via the pstats module.
     '''
 
