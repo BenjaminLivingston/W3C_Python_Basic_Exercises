@@ -138,7 +138,7 @@ def basicPythonExercises():
     lName = str(lName).strip()
     lName = str(lName).title()
     # Clear Screen
-    clearScree(False, True)
+    clearScreen(False, True)
     # Display output
     print('\t Exercise 5 Solution: \n')
     print('User Name: ' + lName + ' ' + fName)
@@ -229,7 +229,18 @@ def basicPythonExercises():
     list.
     color_list = ["Red","Green","White" ,"Black"]
     '''
+    print('\t Exercise 8 Solution: \n')
+    
+    colorList = ["Red","Green","White" ,"Black"]
+    firstColor = str(colorList[0])
+    lastColor = str(colorList[(len(colorList) - 1)])
 
+    # Display Output
+    print('The first color in the list is ' + firstColor)
+    print('The last color in the list is ' + lastColor)
+
+    # Request key press and clear the screen
+    clearScreen(True, True)
 
 
     '''
@@ -239,7 +250,12 @@ def basicPythonExercises():
     exam_st_date = (11, 12, 2014)
     Sample Output : The examination will start from : 11 / 12 / 2014
     '''
+    print('\t Exercise 9 Solution: \n')
+    
+    
 
+    # Request key press and clear the screen
+    clearScreen(True, True)
 
 
     '''
