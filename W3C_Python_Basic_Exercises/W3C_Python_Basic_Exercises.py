@@ -252,7 +252,10 @@ def basicPythonExercises():
     '''
     print('\t Exercise 9 Solution: \n')
     
+    exam_st_date = (11, 12, 2014)
     
+    # Display Output
+    print('The examination will start from: %d / %d / %d'%exam_st_date)
 
     # Request key press and clear the screen
     clearScreen(True, True)
