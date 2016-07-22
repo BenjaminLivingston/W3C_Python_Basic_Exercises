@@ -268,7 +268,7 @@ def basicPythonExercises():
     Sample value of n is 5
     Expected Result : 615
     '''
-    print('\t Exercise 9 Solution: \n')
+    print('\t Exercise 10 Solution: \n')
     
     try:
         # Version 2.7 of python will require raw_input instead of input syntax
@@ -276,14 +276,15 @@ def basicPythonExercises():
             n = int(raw_input("Please enter a number:  ").replace(",",""))
         else:
             n = int(input("Please enter a number:  ").replace(",",""))
+
+        n1 = '{}{}'.format(n, n)
+        n2 = '{}{}{}'.format(n, n, n)
+        n3 = int(n) + int(n1) + int(n2)
+    
+        # Display Output
+        print('\nResult: ' + str(n3))
     except:
         print("\nYou didn't enter a number")
-    n1 = '{}{}'.format(n, n)
-    n2 = '{}{}{}'.format(n, n, n)
-    n3 = int(n) + int(n1) + int(n2)
-    
-    # Display Output
-    print('\nResult: ' + str(n3))
 
     # Request key press and clear the screen
     clearScreen(True, True)
@@ -297,7 +298,21 @@ def basicPythonExercises():
     abs(number) -> number
     Return the absolute value of the argument.
     '''
+    print('\t Exercise 11 Solution: \n')
 
+    try:
+        # Version 2.7 of python will require raw_input instead of input syntax
+        if int(version_info[0]) != 3:
+            funcName = eval(raw_input("Enter the name of a built-in Python function:  ").replace(",",""))
+        else:
+            funcName = eval(input("Enter the name of a built-in Python function:  ").replace(",",""))
+        # Return Output
+        print(funcName.__doc__)
+    except:
+        print("\nYou didn't enter a valid function name.")
+
+    # Request key press and clear the screen
+    clearScreen(True, True)
 
 
     '''
