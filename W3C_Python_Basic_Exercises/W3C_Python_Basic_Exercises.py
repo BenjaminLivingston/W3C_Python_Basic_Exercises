@@ -268,8 +268,25 @@ def basicPythonExercises():
     Sample value of n is 5
     Expected Result : 615
     '''
+    print('\t Exercise 9 Solution: \n')
+    
+    try:
+        # Version 2.7 of python will require raw_input instead of input syntax
+        if int(version_info[0]) != 3:
+            n = int(raw_input("Please enter a number:  ").replace(",",""))
+        else:
+            n = int(input("Please enter a number:  ").replace(",",""))
+    except:
+        print("\nYou didn't enter a number")
+    n1 = '{}{}'.format(n, n)
+    n2 = '{}{}{}'.format(n, n, n)
+    n3 = int(n) + int(n1) + int(n2)
+    
+    # Display Output
+    print('\nResult: ' + str(n3))
 
-
+    # Request key press and clear the screen
+    clearScreen(True, True)
 
     '''
                 - 11 -
