@@ -10,34 +10,20 @@
 
 # Import Resources
 from math import pi
-import sys, textwrap, datetime, time, os, platform
-
-
-# Repeated procedures used in main procedure
-def clearScreen(btnRqst, clrScrn):
-    # Prompt user to enter any key after displaying output.
-    if btnRqst == True:
-        if int(sys.version_info[0]) != 3:
-                raw_input("\n\nPress any key to continue . . . ")
-        else:
-            input("\n\nPress any key to continue . . . ")
-    # Clear the screen.
-    if clrScrn == True:
-        if str(platform.system()).lower() == 'windows':
-            os.system('cls')
-        else:
-            os.system('clear')
+import sys, datetime, time, os, platform
 
 
 # Main Procedure
 def basicPythonExercises():
     # Instructions
-    print('\t\tBasic Python Exercises' +
-          '\nSelect a number 1 - 56 to see the exercise and solution.' +
-          '\nPress any other key to exit program.')
+    textToPrint = ('\n\t\t\t - Basic Python Exercises -'
+                   '\n\n\tSelect a number 1 - 56 to see the exercise and solution.'
+                   '\n\tPress any other key to exit program.')
+    print('{:75}'.format(textToPrint))
 
-
+    # If there is an error exit the program
     try:
+
         # User Selection
         if int(sys.version_info[0]) != 3:
             select = raw_input("\n\nSelection: ")
@@ -46,31 +32,24 @@ def basicPythonExercises():
 
         # Exercise 01
         if str(select) == '1':
-            clearScreen(False, True)
-            print('\n')
-            print('{:^80}'.format('Exercise 01:'))
-            print('\n\n')
-            textToPrint = ('\n\nWrite a Python program to print the following string '
+            textToPrint = ('Write a Python program to print the following string '
                            'in a specific format.'
                            '\n'
                            '\nSample String : "Twinkle, twinkle, little star, How I wonder '
                            'what you are! '
-                           'Up above the world so high, Like a diamond in the sky. Twinkle, '
-                           'twinkle, '
-                           'little star, How I wonder what you are"')
-                           
-            print(textwrap.width(textToPrint,80))
-            print('\n\nOutput :' +
-                  '\nTwinkle, twinkle, little star,' +
-	              '\n\tHow I wonder what you are!' +
-		          '\n\t\tUp above the world so high,' +
-		          '\n\t\tLike a diamond in the sky.' +
-                  '\nTwinkle, twinkle, little star,' +
-	              '\n\tHow I wonder what you are')
-            clearScreen(True, True)
-            print('\n')
-            print('{:^80}'.format('Exercise 01 Solution:'))
-            print('\n\n')
+                           '\nUp above the world so high, Like a diamond in the sky. '
+                           'Twinkle, twinkle, \nlittle star, How I wonder what you are"'
+                           '\n\nOutput :'
+                           '\nTwinkle, twinkle, little star,'
+	                       '\n\tHow I wonder what you are!'
+		                   '\n\t\tUp above the world so high,'
+		                   '\n\t\tLike a diamond in the sky.'
+                           '\nTwinkle, twinkle, little star,'
+	                       '\n\tHow I wonder what you are')            
+            exerciseInstructions(textToPrint, select)
+
+            # Solution
+            exerciseSolution(select)
             print('Twinkle, twinkle, little star,' +
                   '\n\tHow I wonder what you are!' +
                   '\n\t\tUp above the world so high,' +
@@ -78,16 +57,20 @@ def basicPythonExercises():
                   '\nTwinkle, twinkle, little star,' +
                   '\n\tHow I wonder what you are')
 
-            # Request key press and clear the screen
-            clearScreen(True, True)
+            # Run program again?
+            seeAnotherExercise()
 
         # Exercise 02
         elif str(select) == '2':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)            
+
             '''
                         - 02 -
             Write a Python program to get the Python version you are using.
             '''
-            print('\t Exercise 2 Solution: \n')
+            # Solution
+            exerciseSolution(select)
             print('You are using the ' +
                   str(sys.version_info[3]).title() + ' Release' +
                   ' of Python Version: ' +
@@ -95,10 +78,13 @@ def basicPythonExercises():
                   str(sys.version_info[1]) + '.' +
                   str(sys.version_info[2]))
 
-            # Request key press and clear the screen
-            clearScreen(True, True)
-
-
+            # Run program again?
+            seeAnotherExercise()
+        
+        # Exercise 03
+        elif str(select) =='3':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 03 -
             Write a Python program to display the current date and time.
@@ -106,15 +92,19 @@ def basicPythonExercises():
             Current date and time :
             2014-07-05 14:34:14
             '''
+            # Solution
+            exerciseSolution(select)
             currTime = time.time()
-            print('\t Exercise 3 Solution: \n')
             print('Current date and time:')
             print(str(datetime.datetime.fromtimestamp(currTime).strftime('%Y-%m-%d %H:%M:%S')))
 
-            # Request key press and clear the screen
-            clearScreen(True, True)
+            # Run program again?
+            seeAnotherExercise()
 
-
+        # Exercise 04
+        elif str(select) =='4':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 04 -
             Write a Python program which accept the radius of a circle from the user
@@ -124,7 +114,8 @@ def basicPythonExercises():
             Area = 3.8013271108436504
             note the area of a circle is pi * radius squared
             '''
-            print('\t Exercise 4 Solution: \n')
+            # Solution
+            exerciseSolution(select)
             try:
                 # Version 2.7 of python will require raw_input instead of input syntax
                 if int(sys.version_info[0]) != 3:
@@ -141,17 +132,21 @@ def basicPythonExercises():
             except:
                 print("\nYou didn't enter a number.")
 
-           # Request key press and clear the screen
-            clearScreen(True, True)
+           # Run program again?
+            seeAnotherExercise()
 
-
+        # Exercise 05
+        elif str(select) =='5':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 05 -
             Write a Python program which accept the user's first and last name and
             print them in reverse
             order with a space between them.
             '''
-            print('\t Exercise 5 Solution: \n')
+            # Solution
+            exerciseSolution(select)
             if int(sys.version_info[0]) != 3:
                 fName = str(raw_input("Please enter your first name: "))
                 lName = str(raw_input("Please enter your last name: "))
@@ -170,10 +165,13 @@ def basicPythonExercises():
             print('\t Exercise 5 Solution: \n')
             print('User Name: ' + lName + ' ' + fName)
 
-           # Request key press and clear the screen
-            clearScreen(True, True)
+            # Run program again?
+            seeAnotherExercise()
 
-
+        # Exercise 06
+        elif str(select) =='6':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 06 -
             Write a Python program which accepts a sequence of comma-separated numbers
@@ -183,7 +181,8 @@ def basicPythonExercises():
             List : ['3', ' 5', ' 7', ' 23']
             Tuple : ('3', ' 5', ' 7', ' 23')
             '''
-            print('\t Exercise 6 Solution: \n')
+            # Solution
+            exerciseSolution(select)
             # Accept user list of numbers
             if int(sys.version_info[0]) != 3:
                 numString = str(raw_input("Please enter a list of numbers separated by commas" +
@@ -209,10 +208,13 @@ def basicPythonExercises():
             else:
                 print('\nYou did not enter any numbers.')
 
-            # Request key press and clear the screen
-            clearScreen(True, True)
+            # Run program again?
+            seeAnotherExercise()
 
-
+        # Exercise 07
+        elif str(select) =='7':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 07 -
             Write a Python program to accept a filename from the user print the extension
@@ -220,7 +222,8 @@ def basicPythonExercises():
             Sample filename : abc.java
             Output : java
             '''
-            print('\t Exercise 7 Solution 1: \n')
+            # Solution
+            exerciseSolution(select)
             if int(sys.version_info[0]) != 3:
                 fileName = raw_input("Please enter the full file name including extension: ")
             else:
@@ -246,17 +249,21 @@ def basicPythonExercises():
                 # Display Output
                 print('\n\nThe extension of the file is "' + str(fileExt) + '"')
 
-            # Request key press and clear the screen
-            clearScreen(True, True)
+            # Run program again?
+            seeAnotherExercise()
 
-
+        # Exercise 08
+        elif str(select) =='8':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 08 -
             Write a Python program to display the first and last colors from the following
             list.
             color_list = ["Red","Green","White" ,"Black"]
             '''
-            print('\t Exercise 8 Solution: \n')
+            # Solution
+            exerciseSolution(select)
     
             colorList = ["Red","Green","White" ,"Black"]
             firstColor = str(colorList[0])
@@ -266,10 +273,13 @@ def basicPythonExercises():
             print('The first color in the list is ' + firstColor)
             print('The last color in the list is ' + lastColor)
 
-            # Request key press and clear the screen
-            clearScreen(True, True)
+            # Run program again?
+            seeAnotherExercise()
 
-
+        # Exercise 09
+        elif str(select) =='9':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 09 -
             Write a Python program to display the examination schedule. (extract the date
@@ -277,17 +287,21 @@ def basicPythonExercises():
             exam_st_date = (11, 12, 2014)
             Sample Output : The examination will start from : 11 / 12 / 2014
             '''
-            print('\t Exercise 9 Solution: \n')
+            # Solution
+            exerciseSolution(select)
     
             exam_st_date = (11, 12, 2014)
     
             # Display Output
             print('The examination will start from: %d / %d / %d'%exam_st_date)
 
-            # Request key press and clear the screen
-            clearScreen(True, True)
+            # Run program again?
+            seeAnotherExercise()
 
-
+        # Exercise 10
+        elif str(select) =='10':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 10 -
             Write a Python program that accept an integer (n) and computes the value of
@@ -295,7 +309,8 @@ def basicPythonExercises():
             Sample value of n is 5
             Expected Result : 615
             '''
-            print('\t Exercise 10 Solution: \n')
+            # Solution
+            exerciseSolution(select)
     
             try:
                 # Version 2.7 of python will require raw_input instead of input syntax
@@ -313,9 +328,13 @@ def basicPythonExercises():
             except:
                 print("\nYou didn't enter a number")
 
-            # Request key press and clear the screen
-            clearScreen(True, True)
+            # Run program again?
+            seeAnotherExercise()
 
+        # Exercise 11
+        elif str(select) =='11':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 11 -
             Write a Python program to print the documents (syntax, description etc.) of
@@ -325,7 +344,8 @@ def basicPythonExercises():
             abs(number) -> number
             Return the absolute value of the argument.
             '''
-            print('\t Exercise 11 Solution: \n')
+            # Solution
+            exerciseSolution(select)
 
             try:
                 # Version 2.7 of python will require raw_input instead of input syntax
@@ -338,18 +358,26 @@ def basicPythonExercises():
             except:
                 print("\nYou didn't enter a valid function name.")
 
-            # Request key press and clear the screen
-            clearScreen(True, True)
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='12':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 12 -
             Write a Python program to print the calendar of a given month and year.
             Note : Use 'calendar' module.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='13':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 13 -
             Write a Python program to print the following here document.
@@ -359,96 +387,168 @@ def basicPythonExercises():
             is a ....... multi-line
             heredoc string --------> example
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='14':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 14 -
             Write a Python program to calculate number of days between two dates.
             Sample dates : (2014, 7, 2), (2014, 7, 11)
             Expected output : 9 days
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='15':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 15 -
             Write a Python program to get the volume of a sphere with radius 6.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='16':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 16 -
             Write a Python program to get the difference between a given number and 17,
             if the number is greater than 17 return double the absolute difference.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='17':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 17 -
             Write a Python program to test whether a number is within 100 of 1000 or 2000.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='18':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 18 -
             Write a Python program to calculate the sum of three given numbers, if the
             values are equal then return thrice of their sum.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='19':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 19 -
             Write a Python program to get a new string from a given string where "Is"
             has been added to the front. If the given string already begins with "Is"
             then return the string unchanged.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='20':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 20 -
             Write a Python program to get a string which is n (non-negative integer)
             copies of a given string.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='21':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 21 -
             Write a Python program to find whether a given number (accept from the user)
             is even or odd, print out an appropriate message to the user.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='22':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 22 -
             Write a Python program to count the number 4 in a given list.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='23':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 23 -
             Write a Python program to get the n (non-negative integer) copies of the
             first 2 characters of a given sting. Return the n copies of the whole string
             if the length is less than 2.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='24':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 24 -
             Write a Python program to test whether a passed letter is a vowel or not.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='25':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 25 -
             Write a Python program to check whether a specified value is contained in a
@@ -457,24 +557,42 @@ def basicPythonExercises():
             3 -> [1, 5, 8, 3] : True
             -1 -> [1, 5, 8, 3] : False
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='26':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 26 -
             Write a Python program to create a histogram from a given list of integers.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='27':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 27 -
             Write a Python program to concatenate all elements in a list into a string
             and return it.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='28':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 28 -
             Write a Python program to print all even numbers from a given numbers list
@@ -489,9 +607,15 @@ def basicPythonExercises():
                 958,743, 527
                 ]
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
-
+        elif str(select) =='29':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 29 -
             Write a Python program to print out a set containing all the colors from
@@ -502,81 +626,151 @@ def basicPythonExercises():
             Expected Output :
             {'Black', 'White'}
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='30':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 30 -
             Write a Python program that will accept the base and height of a triangle
             and compute the area.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='31':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 31 -
             Write a Python program to compute the greatest common divisor (GCD) of two
             positive integers.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='32':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 32 -
             Write a Python program to get the least common multiple (LCM) of two positive
             integers.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='33':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 33 -
             Write a Python program to sum of three given integers. However, if two values
             are equal sum will be zero.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='34':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 34 -
             Write a Python program to sum of two given integers. However if the sum is
             between 15 to 20 it will return 20.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='35':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 35 -
             Write a Python program that will return true if the two given integer values
             are equal or their sum or difference is 5.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='36':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 36 -
             Write a Python program to add two objects if both objects are integer type.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='37':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 37 -
             Write a Python program to display your details like name, age, address in
             three different lines.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='38':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 38 -
             Write a Python program to solve (x + y) * (x + y).
             Test Data : x = 4, y = 3
             Expected Output : (4 + 3) ^ 2) = 49
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='39':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 39 -
             Write a Python program to compute the future value of a specified principal
@@ -584,89 +778,173 @@ def basicPythonExercises():
             Test Data : amt = 10000, int = 3.5, years = 7
             Expected Output : 12722.79
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='40':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 40 -
             Write a Python program to compute the distance between the points (x1, y1)
             and (x2, y2).
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='41':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 41 -
             Write a Python program to check whether a file exists.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='42':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 42 -
             Write a Python program to determine if a Python shell is executing in 32bit
             or 64bit mode on OS.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='43':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 43 -
             Write a Python program to get OS name, platform and release information.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='44':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 44 -
             Write a Python program to locate Python site-packages.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='45':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 45 -
             Write a python program to call an external command in Python.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='46':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 46 -
             Write a python program to get the path and name of the file that is currently
             executing.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='47':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 47 -
             Write a Python program to find out the number of CPUs using.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='48':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 48 -
             Write a Python program to parse a string to Float or Integer.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='49':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 49 -
             Write a Python program to list all files of a directory in Python.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='50':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 50 -
             Write a Python program to print without newline or space.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='51':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 51 -
             Write a Python program to determine profiling of Python programs.
@@ -674,45 +952,131 @@ def basicPythonExercises():
             long various parts of the program executed. These statistics can be formatted
             into reports via the pstats module.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='52':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 52 -
             Write a Python program to print to stderr.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='53':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 53 -
             Write a python program to access environment variables.
             '''
+            # Solution
+            exerciseSolution(select)
 
+            # Run program again?
+            seeAnotherExercise()
 
+        elif str(select) =='54':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
 
             '''
                         - 54 -
             Write a Python program to get the current username.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='55':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 55 -
             Write a Python to find local IP addresses using Python's stdlib.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
 
 
-
+        elif str(select) =='56':
+            textToPrint = ('')
+            exerciseInstructions(textToPrint, select)
             '''
                         - 56 -
             Write a Python program to get height and width of console window.
             '''
+            # Solution
+            exerciseSolution(select)
+
+            # Run program again?
+            seeAnotherExercise()
+
         else:
-            'sys.exit()'
+            sys.exit()
     except:
-        'sys.exit()'
+        sys.exit()
+
+
+# Repeated procedures used in main procedure
+def clearScreen(btnRqst, clrScrn):
+    # Prompt user to enter any key after displaying output.
+    if btnRqst == True:
+        if int(sys.version_info[0]) != 3:
+                raw_input("\n\nPress any key to continue . . . ")
+        else:
+            input("\n\nPress any key to continue . . . ")
+    # Clear the screen.
+    if clrScrn == True:
+        if str(platform.system()).lower() == 'windows':
+            os.system('cls')
+        else:
+            os.system('clear')
+
+def exerciseInstructions(textToPrint, select):
+    # Instructions for exercise with exercise number
+    clearScreen(False, True)
+    print('\n'+'{:^75}'.format('Exercise '+'{:02d}'.format(int(select))+':')+'\n')
+    print('{:75}'.format(textToPrint))
+    clearScreen(True, True)
+
+def exerciseSolution(select):
+    # Exercise Solution's label with exercise number
+    print('\n'+'{:^75}'.format('Exercise '+'{:02d}'.format(int(select))+' Solution:')+'\n')
+
+def seeAnotherExercise():
+    # Repeat program?
+    try:
+        # Request key press and clear the screen
+        clearScreen(True, True)
+        if int(sys.version_info[0]) != 3:
+            againTest = raw_input("\nWould you like to see another exercise? y/n: ")
+        else:
+            againTest = input("\nWould you like to see another exercise? y/n: ")
+        if str(againTest).lower() == 'y':
+            clearScreen(False, True)
+            basicPythonExercises()
+        else:
+            sys.exit()
+    except:
+        sys.exit()
+
 
 # Call main procedure
 if __name__ == "__main__":
