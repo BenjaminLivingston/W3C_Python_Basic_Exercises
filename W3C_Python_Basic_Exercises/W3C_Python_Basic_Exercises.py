@@ -45,7 +45,8 @@ def basicPythonExercises():
 		                   '\n\t\tUp above the world so high,'
 		                   '\n\t\tLike a diamond in the sky.'
                            '\nTwinkle, twinkle, little star,'
-	                       '\n\tHow I wonder what you are')            
+	                       '\n\tHow I wonder what you are'
+                           )            
             exerciseInstructions(textToPrint, select)
 
             # Solution
@@ -62,13 +63,9 @@ def basicPythonExercises():
 
         # Exercise 02
         elif str(select) == '2':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to get the Python version you are using.')
             exerciseInstructions(textToPrint, select)            
 
-            '''
-                        - 02 -
-            Write a Python program to get the Python version you are using.
-            '''
             # Solution
             exerciseSolution(select)
             print('You are using the ' +
@@ -83,15 +80,13 @@ def basicPythonExercises():
         
         # Exercise 03
         elif str(select) =='3':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to display the current date and time.'
+                           '\n\nSample Output :'
+                           '\nCurrent date and time :'
+                           '\n2014-07-05 14:34:14'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 03 -
-            Write a Python program to display the current date and time.
-            Sample Output :
-            Current date and time :
-            2014-07-05 14:34:14
-            '''
+
             # Solution
             exerciseSolution(select)
             currTime = time.time()
@@ -103,17 +98,16 @@ def basicPythonExercises():
 
         # Exercise 04
         elif str(select) =='4':
-            textToPrint = ('')
+            textToPrint = ('\nWrite a Python program which accept the radius of a circle '
+                           'from the user '
+                           '\nand compute the area.'
+                           '\n\nSample Output :'
+                           '\nr = 1.1'
+                           '\nArea = 3.8013271108436504'
+                           '\nnote the area of a circle is pi * radius squared'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 04 -
-            Write a Python program which accept the radius of a circle from the user
-            and compute the area.
-            Sample Output :
-            r = 1.1
-            Area = 3.8013271108436504
-            note the area of a circle is pi * radius squared
-            '''
+
             # Solution
             exerciseSolution(select)
             try:
@@ -137,14 +131,12 @@ def basicPythonExercises():
 
         # Exercise 05
         elif str(select) =='5':
-            textToPrint = ('')
+            textToPrint = ("Write a Python program which accept the user's first "
+                           "and last name and"
+                           "\nprint them in reverse order with a space between them."
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 05 -
-            Write a Python program which accept the user's first and last name and
-            print them in reverse
-            order with a space between them.
-            '''
+
             # Solution
             exerciseSolution(select)
             if int(sys.version_info[0]) != 3:
@@ -170,17 +162,16 @@ def basicPythonExercises():
 
         # Exercise 06
         elif str(select) =='6':
-            textToPrint = ('')
+            textToPrint = ("Write a Python program which accepts a sequence of "
+                           "comma-separated numbers"
+                           "\nfrom user and generate a list and a tuple with those numbers."
+                           "\n\nSample data : 3, 5, 7, 23"
+                           "\nOutput :"
+                           "\nList : ['3', ' 5', ' 7', ' 23']"
+                           "\nTuple : ('3', ' 5', ' 7', ' 23')"
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 06 -
-            Write a Python program which accepts a sequence of comma-separated numbers
-            from user and generate a list and a tuple with those numbers.
-            Sample data : 3, 5, 7, 23
-            Output :
-            List : ['3', ' 5', ' 7', ' 23']
-            Tuple : ('3', ' 5', ' 7', ' 23')
-            '''
+
             # Solution
             exerciseSolution(select)
             # Accept user list of numbers
@@ -213,15 +204,13 @@ def basicPythonExercises():
 
         # Exercise 07
         elif str(select) =='7':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to accept a filename from the '
+                           'user and print the extension of it.'
+                           '\n\nSample filename : abc.java'
+                           '\nOutput : java'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 07 -
-            Write a Python program to accept a filename from the user print the extension
-            of that.
-            Sample filename : abc.java
-            Output : java
-            '''
+
             # Solution
             exerciseSolution(select)
             if int(sys.version_info[0]) != 3:
@@ -254,14 +243,12 @@ def basicPythonExercises():
 
         # Exercise 08
         elif str(select) =='8':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to display the first and '
+                           'last colors from the following list.'
+                           '\n\ncolor_list = ["Red","Green","White" ,"Black"]'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 08 -
-            Write a Python program to display the first and last colors from the following
-            list.
-            color_list = ["Red","Green","White" ,"Black"]
-            '''
+
             # Solution
             exerciseSolution(select)
     
@@ -278,7 +265,8 @@ def basicPythonExercises():
 
         # Exercise 09
         elif str(select) =='9':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 09 -
@@ -300,7 +288,8 @@ def basicPythonExercises():
 
         # Exercise 10
         elif str(select) =='10':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 10 -
@@ -333,7 +322,8 @@ def basicPythonExercises():
 
         # Exercise 11
         elif str(select) =='11':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 11 -
@@ -362,7 +352,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='12':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 12 -
@@ -376,7 +367,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='13':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 13 -
@@ -394,7 +386,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='14':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 14 -
@@ -409,7 +402,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='15':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 15 -
@@ -422,7 +416,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='16':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 16 -
@@ -436,7 +431,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='17':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 17 -
@@ -449,7 +445,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='18':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 18 -
@@ -463,7 +460,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='19':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 19 -
@@ -478,7 +476,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='20':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 20 -
@@ -492,7 +491,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='21':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 21 -
@@ -506,7 +506,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='22':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 22 -
@@ -519,7 +520,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='23':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 23 -
@@ -534,7 +536,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='24':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 24 -
@@ -547,7 +550,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='25':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 25 -
@@ -564,7 +568,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='26':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 26 -
@@ -577,7 +582,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='27':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 27 -
@@ -591,7 +597,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='28':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 28 -
@@ -614,7 +621,8 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='29':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 29 -
@@ -634,7 +642,8 @@ def basicPythonExercises():
 
 
         elif str(select) =='30':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 30 -
@@ -649,7 +658,8 @@ def basicPythonExercises():
 
 
         elif str(select) =='31':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 31 -
@@ -664,7 +674,8 @@ def basicPythonExercises():
 
 
         elif str(select) =='32':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 32 -
@@ -679,7 +690,8 @@ def basicPythonExercises():
 
 
         elif str(select) =='33':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 33 -
@@ -694,7 +706,8 @@ def basicPythonExercises():
 
 
         elif str(select) =='34':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 34 -
@@ -709,7 +722,8 @@ def basicPythonExercises():
 
 
         elif str(select) =='35':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 35 -
@@ -724,7 +738,8 @@ def basicPythonExercises():
 
 
         elif str(select) =='36':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 36 -
@@ -738,7 +753,8 @@ def basicPythonExercises():
 
 
         elif str(select) =='37':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 37 -
@@ -753,7 +769,8 @@ def basicPythonExercises():
 
 
         elif str(select) =='38':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 38 -
@@ -769,7 +786,8 @@ def basicPythonExercises():
 
 
         elif str(select) =='39':
-            textToPrint = ('')
+            textToPrint = (''
+                           )
             exerciseInstructions(textToPrint, select)
             '''
                         - 39 -
@@ -786,13 +804,11 @@ def basicPythonExercises():
 
 
         elif str(select) =='40':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to compute the distance '
+                           'between the points (x1, y1) and (x2, y2).'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 40 -
-            Write a Python program to compute the distance between the points (x1, y1)
-            and (x2, y2).
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -801,12 +817,10 @@ def basicPythonExercises():
 
 
         elif str(select) =='41':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to check whether a file exists.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 41 -
-            Write a Python program to check whether a file exists.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -815,13 +829,11 @@ def basicPythonExercises():
 
 
         elif str(select) =='42':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to determine if a Python shell is '
+                           'executing in 32bit or 64bit mode on OS.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 42 -
-            Write a Python program to determine if a Python shell is executing in 32bit
-            or 64bit mode on OS.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -830,12 +842,11 @@ def basicPythonExercises():
 
 
         elif str(select) =='43':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to get OS name, platform and '
+                           'release information.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 43 -
-            Write a Python program to get OS name, platform and release information.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -844,12 +855,10 @@ def basicPythonExercises():
 
 
         elif str(select) =='44':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to locate Python site-packages.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 44 -
-            Write a Python program to locate Python site-packages.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -858,12 +867,10 @@ def basicPythonExercises():
 
 
         elif str(select) =='45':
-            textToPrint = ('')
+            textToPrint = ('Write a python program to call an external command in Python.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 45 -
-            Write a python program to call an external command in Python.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -872,13 +879,11 @@ def basicPythonExercises():
 
 
         elif str(select) =='46':
-            textToPrint = ('')
+            textToPrint = ('Write a python program to get the path and name of '
+            'the file that is currently executing.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 46 -
-            Write a python program to get the path and name of the file that is currently
-            executing.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -887,12 +892,10 @@ def basicPythonExercises():
 
 
         elif str(select) =='47':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to find out the number of CPUs using it.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 47 -
-            Write a Python program to find out the number of CPUs using.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -901,12 +904,10 @@ def basicPythonExercises():
 
 
         elif str(select) =='48':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to parse a string to Float or Integer.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 48 -
-            Write a Python program to parse a string to Float or Integer.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -915,12 +916,10 @@ def basicPythonExercises():
 
 
         elif str(select) =='49':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to list all files of a directory in Python.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 49 -
-            Write a Python program to list all files of a directory in Python.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -929,12 +928,10 @@ def basicPythonExercises():
 
 
         elif str(select) =='50':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to print without newline or space.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 50 -
-            Write a Python program to print without newline or space.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -943,15 +940,15 @@ def basicPythonExercises():
 
 
         elif str(select) =='51':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to determine profiling of Python programs.'
+                           '/nNote: A profile is a set of statistics that'
+                           'describes how often and for how long '
+                           '/nvarious parts of the program executed. These '
+                           'statistics can be formatted into reports '
+                           '/nvia the pstats module.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 51 -
-            Write a Python program to determine profiling of Python programs.
-            Note: A profile is a set of statistics that describes how often and for how
-            long various parts of the program executed. These statistics can be formatted
-            into reports via the pstats module.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -960,12 +957,10 @@ def basicPythonExercises():
 
 
         elif str(select) =='52':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to print to stderr.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 52 -
-            Write a Python program to print to stderr.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -974,12 +969,10 @@ def basicPythonExercises():
 
 
         elif str(select) =='53':
-            textToPrint = ('')
+            textToPrint = ('Write a python program to access environment variables.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 53 -
-            Write a python program to access environment variables.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -987,13 +980,10 @@ def basicPythonExercises():
             seeAnotherExercise()
 
         elif str(select) =='54':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to get the current username.'
+                           )
             exerciseInstructions(textToPrint, select)
 
-            '''
-                        - 54 -
-            Write a Python program to get the current username.
-            '''
             # Solution
             exerciseSolution(select)
 
@@ -1002,12 +992,10 @@ def basicPythonExercises():
 
 
         elif str(select) =='55':
-            textToPrint = ('')
+            textToPrint = ('Write a Python to find local IP addresses using Python's stdlib.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 55 -
-            Write a Python to find local IP addresses using Python's stdlib.
-            '''
+
             # Solution
             exerciseSolution(select)
 
@@ -1016,12 +1004,10 @@ def basicPythonExercises():
 
 
         elif str(select) =='56':
-            textToPrint = ('')
+            textToPrint = ('Write a Python program to get height and width of console window.'
+                           )
             exerciseInstructions(textToPrint, select)
-            '''
-                        - 56 -
-            Write a Python program to get height and width of console window.
-            '''
+
             # Solution
             exerciseSolution(select)
 
